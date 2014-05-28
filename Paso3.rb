@@ -10,4 +10,6 @@ print saludo
 
 print saludo.reverse
 
-print saludo.lines.to_a.reverse
+print saludo.lines.to_a.reverse.join
+
+print saludo.downcase
