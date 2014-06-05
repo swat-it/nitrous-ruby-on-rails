@@ -9,5 +9,8 @@ class User
 	def metodo1
 	end
 
+	def metodosprint1
+	end
+
 end
 
