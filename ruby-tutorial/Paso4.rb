@@ -20,6 +20,8 @@ puts records
 
 puts books.values.each{ |rate| records[rate] +=1}
 
+puts books.keys.each{ |rate| records[rate] +=1}
+
 puts records
 
 veces=10

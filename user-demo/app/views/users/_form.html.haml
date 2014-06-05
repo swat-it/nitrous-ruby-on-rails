@@ -1,0 +1,22 @@
+= form_for(@user) do |f|
+  - if @user.errors.any?
+    #error_explanation
+      %h2
+        Se ha encontrado
+        = pluralize(@user.errors.count, "error")
+        para poder guardar el usuario:
+      %ul
+        - @user.errors.full_messages.each do |message|
+          %li= message
+    
+  .field
+    = f.label :name
+    %br/
+    = f.text_field :name
+  .field
+    = f.label :email
+    %br/
+    = f.text_field :email
+  .actions
+    = f.submit
+= link_to 'Back', users_path

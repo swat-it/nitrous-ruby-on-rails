@@ -8,5 +8,5 @@ def load_comics( path )
   comics
 end
 
-puts comics = load_comics('/home/action/workspace/nitrous-ruby-on-rails/peliculas.txt')
+puts comics = load_comics('/home/action/workspace/nitrous-ruby-on-rails/ruby-tutorial/peliculas.txt')
 

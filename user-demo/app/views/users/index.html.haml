@@ -1,0 +1,18 @@
+%span.glyphicon.glyphicon-home
+  %h1 Pagina principal de usuarios
+%table.table.table-bordered
+  %thead
+    %tr
+      %th Name
+      %th Email
+      %th{colspan: "3"}
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td= user.name
+        %td= user.email
+        %td= link_to 'Mostrar', user
+        %td= link_to 'Editar', edit_user_path(user)
+        %td= link_to 'Eliminar', user, method: :delete, data: { confirm: '¿Esta Seguro de Eliminarlo?' }
+%br/
+= link_to 'New User', nuevo_path
