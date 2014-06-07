@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
-  resources :microposts
+  get 'pages/home'
 
-  resources :users
+  get 'pages/about'
 
-  root 'users#index'
+  get 'pages/help'
+
+  get 'pages/contact'
+  
+  root 'pages#home'
+
+  get '/pages' => 'pages#home', as: 'pages_index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
